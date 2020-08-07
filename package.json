@@ -1,0 +1,28 @@
+{
+  "name": "generator-dwrt-cli",
+  "version": "0.1.0",
+  "description": "a generator-generator to generate dwrt-cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuchaosun/generator-dwrt-cli.git"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "liuchaosun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuchaosun/generator-dwrt-cli/issues"
+  },
+  "homepage": "https://github.com/liuchaosun/generator-dwrt-cli#readme",
+  "dependencies": {
+    "yeoman-generator": "^4.11.0"
+  }
+}
