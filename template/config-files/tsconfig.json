@@ -1,0 +1,61 @@
+// 关于编译配置可以看， https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9
+{
+  "compilerOptions": {
+    "module": "commonjs", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "jsx": "react",
+    "target": "es5", // 编译降级代码到es5
+    "allowJs": true, // 允许编译 js
+    "outDir": "./build",
+    "strict": true, // 开启严格模式
+    "sourceMap": true,
+    "noEmitOnError": true, // 报错时不生成输出文件
+    "noImplicitAny": true, // 禁止默认推断为any
+    "noImplicitThis": true, // 错误,当没有明确指定类型this
+    "noUnusedLocals": true, // 变量声明了但是未使用，报错
+    "noUnusedParameters": true, // 参数定义了未使用，报错
+    "allowSyntheticDefaultImports": true, // 允许对不包含默认导出的模块使用默认导入
+    "noFallthroughCasesInSwitch": true,
+    // 帮助 vscode 识别 alias
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@api/*": [
+        "src/api/*"
+      ],
+      "@c/*": [
+        "src/common/*"
+      ],
+      "@cc/*": [
+        "src/common/components/*"
+      ],
+      "@HOC/*": [
+        "src/common/HOC/*"
+      ],
+      "@images/*": [
+        "src/common/images/*"
+      ],
+      "@utils/*": [
+        "src/common/utils/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@mytypes/*": [
+        "src/mytypes/*"
+      ],
+    }
+  },
+  // 编译配置，开启严格模式
+  "parserOpts": {
+    "strictMode": true
+  },
+  // 设置一个默认的文本读取目录，如果没有此配置则读取所有文件，除了配置 exclude
+  "include": [
+    "./src/**/*"
+  ]
+}

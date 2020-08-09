@@ -1,0 +1,6 @@
+# 配置不需要检测的文件
+build
+node_modules
+
+# 编译模块的文件 不检测
+build-config

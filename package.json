@@ -1,8 +1,7 @@
 {
   "name": "generator-dwrt-cli",
   "version": "0.1.0",
-  "description": "a generator-generator to generate dwrt-cli",
-  "main": "index.js",
+  "description": "一个用来生成脚手架 dwrt-cli 的生成器",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
