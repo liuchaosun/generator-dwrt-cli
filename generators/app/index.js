@@ -1,4 +1,5 @@
 var Generator = require('yeoman-generator');
+var configArray = require('./config-files');
 
 var path = require('path');
 
@@ -7,11 +8,23 @@ module.exports = class extends Generator {
   constructor(args, opts) {
     // Calling the super constructor is important so our generator is correctly set up
     super(args, opts);
-    this.log('Hey! Welcome to my awesome generator: dwrt-cli');
-
+    this.log('欢迎使用脚手架: dwrt-cli');
     // 添加此配置，调用 yo dwrt-cli 时必须传入一个目录名如 yo dwrt-cli demo
     this.argument("projectName", { type: String, required: true, desc: "请输入你的项目名称" });
   }
+  initializing() {
+    this.log('初始化ing...');
+  }
+  configuring() {
+    this.log('生成配置文件...');
+  }
+  conflicts() {
+    this.log('有冲突的话这里解决一下...');
+  }
+  end() {
+    this.log('脚手架生成完毕，祝您工作愉快！');
+  }
+
   // 设置路径
   paths() {
     // 重新设置模板文件路径
@@ -23,6 +36,7 @@ module.exports = class extends Generator {
 
   // 用户交互
   async prompting() {
+    this.log('请配合提示输入以下信息：');
     // this.prompt 调用提示模块
     this.answers = await this.prompt([
       {// 项目名称
@@ -52,6 +66,8 @@ module.exports = class extends Generator {
     ]);
   }
 
+
+
   // 写入文件系统
   writing() {
 
@@ -78,56 +94,18 @@ module.exports = class extends Generator {
     );
 
     // ！！！关键生成其他配置文件
-    this._private_generator_config_files();
+    configArray.forEach(item => {
+      this.fs.copyTpl(
+        this.templatePath('./config-files/' + item[0]),
+        this.destinationPath(item[1])
+      );
+    })
   }
 
   // 安装依赖
   install() {
-    this.npmInstall(['lodash', "eslint"], { 'save-dev': true });
     // 加载其他默认的插件
     this.npmInstall();
-  }
-
-
-  // 复制一些固定的配置文件的函数
-  _private_generator_config_files() {
-    // 创建 .ediotrconfig 配置文件
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.editorconfig'),
-      this.destinationPath('.editorconfig')
-    );
-
-    // 创建 eslint 相关
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.eslintignore'),
-      this.destinationPath('.eslintignore')
-    );
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.eslintrc.js'),
-      this.destinationPath('.eslintrc.js')
-    );
-
-    // 创建 git 相关
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.gitattributes'),
-      this.destinationPath('.gitattributes')
-    );
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.gitignore'),
-      this.destinationPath('.gitignore')
-    );
-
-    // npm相关
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.npmrc'),
-      this.destinationPath('.npmrc')
-    );
-
-    // travis
-    this.fs.copyTpl(
-      this.templatePath('./config-files/.travis.yml'),
-      this.destinationPath('.travis.yml')
-    );
-
+    this.npmInstall(['lodash', "eslint"], { 'save-dev': true });
   }
 };

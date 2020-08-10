@@ -1,15 +1,15 @@
 /**
  * 可用的一些自定义配置参数
  * buildPathName: 'build'   编译后的文件目录名
- * templatePathName: 'template' 模板文件目录
  * appPathName: 'src' 程序主代码目录
+ * templatePathName: 'template' 模板文件目录
  * outPublicPathName: 'public' 开发的不编译文件目录
  * triparitePathName: 'lib' 第三方库目录，如 echarts ，不编译
  *
  * siteDescription 一些关于本站点的描述信息
  *
- * speedMeassure 是否开启编译速度检测,开启后部分优化构建功能将失效,发布上线前的构建需要设置为 false,默认false
- * assetsMersure 是否开启编译资源体积大小检测,开启后编译不结束,因此在发布前需要设置为 false ,默认false
+ * speedMeassure 是否开启编译速度检测, 开启后部分优化构建功能将失效, 发布上线前的构建需要设置为 false, 默认false
+ * assetsMersure 是否开启编译资源体积大小检测, 开启后编译不结束, 因此在发布前需要设置为 false ,默认false
  *
  */
 

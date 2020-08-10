@@ -1,5 +1,8 @@
-// 开启后，代码编写阶段就进行格式校验和自动格式化
-// 官方资料：https://prettier.io/docs/en/options.html
+/**
+ * 开启后， 代码编写阶段就进行格式校验和自动格式化
+ * 
+ * 官方资料：https://prettier.io/docs/en/options.html
+ */
 module.exports = {
   // 文件一行最大长度，Default 80
   printWidth: 100,
