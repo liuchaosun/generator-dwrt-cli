@@ -1,6 +1,6 @@
 {
   "name": "generator-dwrt-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "一个用来生成脚手架的生成器插件，提供给 dwrt-cli 使用",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
