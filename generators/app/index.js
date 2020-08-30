@@ -1,5 +1,4 @@
 // fs 用法 https://github.com/sboudrias/mem-fs-editor
-
 var Generator = require('yeoman-generator');
 
 var path = require('path');
@@ -11,7 +10,6 @@ module.exports = class extends Generator {
   constructor(args, opts) {
     // 调用继承自父类的构造器
     super(args, opts);
-    this.log('欢迎使用脚手架: dwrt-cli');
     // 添加此配置，调用 yo dwrt-cli 时必须传入一个目录名如 yo dwrt-cli demo
     this.argument("projectName", { type: String, required: true, desc: "请输入你的项目名称" });
     this.option("folder", { type: Boolean, required: false, desc: "开启此配置会以项目名称生成一个目录" });
@@ -49,6 +47,11 @@ module.exports = class extends Generator {
         name: "title",
         message: "html 模板的 title",
         default: this.options.projectName,
+      }, {// 依赖管理
+        type: "confirm",
+        name: "autoInstall",
+        message: "是否下载所有依赖",
+        default: true
       }
     ]);
   }
@@ -112,7 +115,9 @@ module.exports = class extends Generator {
   // 安装依赖
   install() {
     // 加载其他默认的插件
-    this.npmInstall();
+    if (this.answers.autoInstall) {
+      this.npmInstall();
+    }
   }
   conflicts() {
     // this.log('有冲突的话这里解决一下...');

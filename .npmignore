@@ -1,5 +1,3 @@
-CHANGELOG.md
-build
-lib
 package-lock.json
 node_modules
+.gitignore

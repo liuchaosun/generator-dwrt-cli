@@ -1,5 +1,9 @@
 # generator-dwrt-cli
 
-本工具是生成脚手架工具的脚手架，基于 yeoman 实现。
+此模块是脚手架 dwrt-cli 依赖的生成器，维护创建的项目的版本和结构等。
 
-目前模板相关文件都在 template 目录下
+## 模块介绍
+
+### generators
+
+### template
