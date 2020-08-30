@@ -1,0 +1,1 @@
+export const UPDATE_USER_PAGES = 'UPDATE_USER_PAGES';

@@ -1,7 +1,3 @@
-# 通过配置文件解决 git 提交时的一些行为，例如自动转化换行符
-# 也可以通过设置 git config --global core.autocrlf false 、 git config --global core.safecrlf false
-# Git的gitattributes文件是一个文本文件，文件中的一行定义一个路径的若干属性。以行为单位设置一个路径下所有文件的属性,格式如下：
-# 要匹配的文件模式 属性1 属性2,如 *.js text eol=lf
 *       text=auto
 *.txt		text
 
@@ -9,16 +5,7 @@
 *.jpg  -text
 *.png  -text
 
-*.vcproj	 text eol=crlf
 *.sh		   text eol=lf
 
-# 
-*.js eol=lf
-*.jsx eol=lf
-*.ts eol=lf
-*.tsx eol=lf
-*.json eol=lf
-*.css eol=lf
-*.less eol=lf
-
-
+# 开启所有
+* eol=lf

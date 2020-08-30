@@ -1,15 +1,8 @@
-/**
- * 开启后， 代码编写阶段就进行格式校验和自动格式化
- * 
- * 官方资料：https://prettier.io/docs/en/options.html
- */
+// 开启后，代码编写阶段就进行格式校验和自动格式化
+// 官方资料：https://prettier.io/docs/en/options.html
 module.exports = {
   // 文件一行最大长度，Default 80
   printWidth: 100,
-  // 使用2个空格缩进，Default 2
-  tabWidth: 2,
-  // 不使用TAB缩进，使用空格，Default false
-  useTabs: false,
   // 每行末尾自动添加分号， Default	true
   semi: true,
   // 字符串使用单引号， Default false
@@ -28,8 +21,6 @@ module.exports = {
   arrowParens: 'always',
   // 根据显示样式决定 html 是否需要换行，Default 'css'
   htmlWhitespaceSensitivity: 'css',
-  // 换行符使用lf : line feed，Default 'lf'
-  endOfLine: 'lf',
   // 是否需要引入 @prettier， Default	false
   requirePragma: false,
   // 是否需要插入 @prettier， Default	false

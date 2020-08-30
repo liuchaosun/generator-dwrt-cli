@@ -1,13 +1,12 @@
-# 编辑器配置--影响编辑器格式, 其他代码格式化操作交给prettier
-
+# 编辑器配置--影响编辑器格式，其他代码格式化操作交给prettier
 # http://editorconfig.org
 
 root = true
 
 [*]
-# Set default charset：默认字符集
+# Set default charset： 默认字符集
 charset = utf-8
-# 2 space indentation：缩进
+# 2 space indentation： 缩进
 indent_style = space
 indent_size = 2
 # Unix-style newlines with a newline ending every file：文末新行

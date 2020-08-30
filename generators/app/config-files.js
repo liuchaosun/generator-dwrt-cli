@@ -13,18 +13,14 @@ module.exports = [
   ["_gitattributes", ".gitattributes"],
   // npm相关
   ["_npmrc", ".npmrc"],
-  // travis
-  ["_travis.yml", ".travis.yml"],
   // babel
   ["babel.config.js", "babel.config.js"],
   // commitlint 配置文件
   ["commitlint.config.js", "commitlint.config.js"],
   // 项目自定义配置
-  ["define-config.js", "define-config.js"],
-  // postcss-loader 配置
-  ["postcss.config.js", "postcss.config.js"],
+  ["dwrt-cli-config.js", "dwrt-cli-config.js"],
   // prettier 插件配置
   ["prettier.config.js", "prettier.config.js"],
   // TypeScript配置
-  ["tsconfig.json", "tsconfig.json"],
+  ["_tsconfig.json", "tsconfig.json"],
 ];

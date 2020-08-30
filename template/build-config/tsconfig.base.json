@@ -1,0 +1,19 @@
+// 关于编译配置可以看
+// https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9
+{
+  "compilerOptions": {
+    "module": "commonjs", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "jsx": "react",
+    "target": "es5", // 编译降级代码到es5
+    "allowJs": true, // 允许编译 js
+    "strict": true, // 开启严格模式
+    "sourceMap": true,
+    "noEmitOnError": true, // 报错时不生成输出文件
+    "noImplicitAny": true, // 禁止默认推断为any
+    "noImplicitThis": true, // 错误,当没有明确指定类型this
+    "noUnusedLocals": true, // 变量声明了但是未使用，报错
+    "noUnusedParameters": true, // 参数定义了未使用，报错
+    "allowSyntheticDefaultImports": true, // 允许对不包含默认导出的模块使用默认导入
+    "noFallthroughCasesInSwitch": true,
+  }
+}

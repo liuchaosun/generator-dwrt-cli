@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('raw-loader!./_common/meta.html').default %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <noscript>
+      <p>本站是什么站点(WHAT)</p>
+      <p>本站为什么建立(WHY)</p>
+      <p>本站怎么实现(HOW)</p>
+      <p>需要浏览器支持js</p>
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>
