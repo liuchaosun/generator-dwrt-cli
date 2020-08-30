@@ -13,6 +13,7 @@ module.exports = [
   ["_gitattributes", ".gitattributes"],
   // npm相关
   ["_npmrc", ".npmrc"],
+  ["_npmignore", ".npmignore"],
   // babel
   ["babel.config.js", "babel.config.js"],
   // commitlint 配置文件
