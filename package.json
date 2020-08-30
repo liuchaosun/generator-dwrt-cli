@@ -10,7 +10,8 @@
     "url": "git+https://github.com/liuchaosun/generator-dwrt-cli.git"
   },
   "files": [
-    "generators"
+    "generators",
+    "template"
   ],
   "keywords": [
     "yeoman-generator"
