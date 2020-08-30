@@ -15,7 +15,6 @@ module.exports = class extends Generator {
     // 添加此配置，调用 yo dwrt-cli 时必须传入一个目录名如 yo dwrt-cli demo
     this.argument("projectName", { type: String, required: true, desc: "请输入你的项目名称" });
     this.option("folder", { type: Boolean, required: false, desc: "开启此配置会以项目名称生成一个目录" });
-
   }
   initializing() {
     this.log('初始化ing...');
@@ -113,7 +112,7 @@ module.exports = class extends Generator {
   // 安装依赖
   install() {
     // 加载其他默认的插件
-    // this.npmInstall();
+    this.npmInstall();
   }
   conflicts() {
     // this.log('有冲突的话这里解决一下...');
