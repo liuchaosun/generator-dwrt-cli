@@ -69,9 +69,9 @@ module.exports = function ({ htmlArray, defineVariable, publicPathName }) {
     {
       loader: 'postcss-loader',
       options: {
-        config: {
-          // 修改配置文件的查找目录，收敛到当前目录下
-          path: path.resolve(__dirname, './'),
+        postcssOptions: {
+          // * 修改配置文件的查找目录，收敛到当前目录下
+          config: path.resolve(__dirname, './postcss.config.js'),
         },
       },
     },
